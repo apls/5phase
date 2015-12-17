@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.924 ns
+From           : mod
+To             : stepper:s1|position[3]
+From Clock     : --
+To Clock       : pul
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.418 ns
+From           : dir
+To             : stepper:s1|position[3]
+From Clock     : --
+To Clock       : pul
+Failed Paths   : 0
+
+Type           : Clock Setup: 'pul'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 131.53 MHz ( period = 7.603 ns )
+From           : stepper:s1|position[8]
+To             : stepper:s1|position[11]
+From Clock     : pul
+To Clock       : pul
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

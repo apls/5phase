@@ -1,0 +1,440 @@
+Classic Timing Analyzer report for epm240
+Thu Dec 17 15:46:06 2015
+Quartus II Version 6.1 Build 201 11/27/2006 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'pul'
+  6. tsu
+  7. th
+  8. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                           ;
++------------------------------+-------+---------------+----------------------------------+------------------------+-------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                   ; To                      ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+------------------------+-------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 1.924 ns                         ; mod                    ; stepper:s1|position[3]  ; --         ; pul      ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 2.418 ns                         ; dir                    ; stepper:s1|position[3]  ; --         ; pul      ; 0            ;
+; Clock Setup: 'pul'           ; N/A   ; None          ; 131.53 MHz ( period = 7.603 ns ) ; stepper:s1|position[8] ; stepper:s1|position[11] ; pul        ; pul      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                        ;                         ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+------------------------+-------------------------+------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EPM240T100C5       ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; pul             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'pul'                                                                                                                                                                                                     ;
++-------+------------------------------------------------+-------------------------+-------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                    ; To                      ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------+-------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 131.53 MHz ( period = 7.603 ns )               ; stepper:s1|position[8]  ; stepper:s1|position[11] ; pul        ; pul      ; None                        ; None                      ; 6.894 ns                ;
+; N/A   ; 134.61 MHz ( period = 7.429 ns )               ; stepper:s1|position[8]  ; stepper:s1|position[10] ; pul        ; pul      ; None                        ; None                      ; 6.720 ns                ;
+; N/A   ; 136.11 MHz ( period = 7.347 ns )               ; stepper:s1|fmod         ; stepper:s1|position[18] ; pul        ; pul      ; None                        ; None                      ; 6.638 ns                ;
+; N/A   ; 138.81 MHz ( period = 7.204 ns )               ; stepper:s1|position[8]  ; stepper:s1|position[8]  ; pul        ; pul      ; None                        ; None                      ; 6.495 ns                ;
+; N/A   ; 139.12 MHz ( period = 7.188 ns )               ; stepper:s1|position[9]  ; stepper:s1|position[11] ; pul        ; pul      ; None                        ; None                      ; 6.479 ns                ;
+; N/A   ; 141.12 MHz ( period = 7.086 ns )               ; stepper:s1|position[1]  ; stepper:s1|position[3]  ; pul        ; pul      ; None                        ; None                      ; 6.377 ns                ;
+; N/A   ; 141.18 MHz ( period = 7.083 ns )               ; stepper:s1|fmod         ; stepper:s1|position[4]  ; pul        ; pul      ; None                        ; None                      ; 6.374 ns                ;
+; N/A   ; 142.57 MHz ( period = 7.014 ns )               ; stepper:s1|position[9]  ; stepper:s1|position[10] ; pul        ; pul      ; None                        ; None                      ; 6.305 ns                ;
+; N/A   ; 145.73 MHz ( period = 6.862 ns )               ; stepper:s1|position[1]  ; stepper:s1|position[2]  ; pul        ; pul      ; None                        ; None                      ; 6.153 ns                ;
+; N/A   ; 146.03 MHz ( period = 6.848 ns )               ; stepper:s1|fmod         ; stepper:s1|position[16] ; pul        ; pul      ; None                        ; None                      ; 6.139 ns                ;
+; N/A   ; 147.25 MHz ( period = 6.791 ns )               ; stepper:s1|position[8]  ; stepper:s1|position[7]  ; pul        ; pul      ; None                        ; None                      ; 6.082 ns                ;
+; N/A   ; 147.30 MHz ( period = 6.789 ns )               ; stepper:s1|position[9]  ; stepper:s1|position[8]  ; pul        ; pul      ; None                        ; None                      ; 6.080 ns                ;
+; N/A   ; 148.39 MHz ( period = 6.739 ns )               ; stepper:s1|fmod         ; stepper:s1|position[9]  ; pul        ; pul      ; None                        ; None                      ; 6.030 ns                ;
+; N/A   ; 148.65 MHz ( period = 6.727 ns )               ; stepper:s1|fmod         ; stepper:s1|position[17] ; pul        ; pul      ; None                        ; None                      ; 6.018 ns                ;
+; N/A   ; 149.54 MHz ( period = 6.687 ns )               ; stepper:s1|fmod         ; stepper:s1|position[5]  ; pul        ; pul      ; None                        ; None                      ; 5.978 ns                ;
+; N/A   ; 150.29 MHz ( period = 6.654 ns )               ; stepper:s1|fmod         ; stepper:s1|position[0]  ; pul        ; pul      ; None                        ; None                      ; 5.945 ns                ;
+; N/A   ; 152.46 MHz ( period = 6.559 ns )               ; stepper:s1|position[0]  ; stepper:s1|position[3]  ; pul        ; pul      ; None                        ; None                      ; 5.850 ns                ;
+; N/A   ; 152.77 MHz ( period = 6.546 ns )               ; stepper:s1|fmod         ; stepper:s1|position[19] ; pul        ; pul      ; None                        ; None                      ; 5.837 ns                ;
+; N/A   ; 153.30 MHz ( period = 6.523 ns )               ; stepper:s1|fmod         ; stepper:s1|position[15] ; pul        ; pul      ; None                        ; None                      ; 5.814 ns                ;
+; N/A   ; 153.80 MHz ( period = 6.502 ns )               ; stepper:s1|fmod         ; stepper:s1|position[14] ; pul        ; pul      ; None                        ; None                      ; 5.793 ns                ;
+; N/A   ; 155.69 MHz ( period = 6.423 ns )               ; stepper:s1|fmod         ; stepper:s1|position[6]  ; pul        ; pul      ; None                        ; None                      ; 5.714 ns                ;
+; N/A   ; 156.45 MHz ( period = 6.392 ns )               ; stepper:s1|position[17] ; stepper:s1|position[17] ; pul        ; pul      ; None                        ; None                      ; 5.683 ns                ;
+; N/A   ; 156.47 MHz ( period = 6.391 ns )               ; stepper:s1|position[17] ; stepper:s1|position[16] ; pul        ; pul      ; None                        ; None                      ; 5.682 ns                ;
+; N/A   ; 156.79 MHz ( period = 6.378 ns )               ; stepper:s1|position[17] ; stepper:s1|position[19] ; pul        ; pul      ; None                        ; None                      ; 5.669 ns                ;
+; N/A   ; 156.84 MHz ( period = 6.376 ns )               ; stepper:s1|position[9]  ; stepper:s1|position[7]  ; pul        ; pul      ; None                        ; None                      ; 5.667 ns                ;
+; N/A   ; 156.91 MHz ( period = 6.373 ns )               ; stepper:s1|position[17] ; stepper:s1|position[0]  ; pul        ; pul      ; None                        ; None                      ; 5.664 ns                ;
+; N/A   ; 157.85 MHz ( period = 6.335 ns )               ; stepper:s1|position[0]  ; stepper:s1|position[2]  ; pul        ; pul      ; None                        ; None                      ; 5.626 ns                ;
+; N/A   ; 157.90 MHz ( period = 6.333 ns )               ; stepper:s1|fmod         ; stepper:s1|position[7]  ; pul        ; pul      ; None                        ; None                      ; 5.624 ns                ;
+; N/A   ; 158.08 MHz ( period = 6.326 ns )               ; stepper:s1|fmod         ; stepper:s1|position[13] ; pul        ; pul      ; None                        ; None                      ; 5.617 ns                ;
+; N/A   ; 158.43 MHz ( period = 6.312 ns )               ; stepper:s1|fmod         ; stepper:s1|position[8]  ; pul        ; pul      ; None                        ; None                      ; 5.603 ns                ;
+; N/A   ; 159.08 MHz ( period = 6.286 ns )               ; stepper:s1|fmod         ; stepper:s1|position[11] ; pul        ; pul      ; None                        ; None                      ; 5.577 ns                ;
+; N/A   ; 159.29 MHz ( period = 6.278 ns )               ; stepper:s1|position[15] ; stepper:s1|position[18] ; pul        ; pul      ; None                        ; None                      ; 5.569 ns                ;
+; N/A   ; 159.69 MHz ( period = 6.262 ns )               ; stepper:s1|position[7]  ; stepper:s1|position[9]  ; pul        ; pul      ; None                        ; None                      ; 5.553 ns                ;
+; N/A   ; 161.58 MHz ( period = 6.189 ns )               ; stepper:s1|position[5]  ; stepper:s1|position[4]  ; pul        ; pul      ; None                        ; None                      ; 5.480 ns                ;
+; N/A   ; 161.60 MHz ( period = 6.188 ns )               ; stepper:s1|fmod         ; stepper:s1|position[3]  ; pul        ; pul      ; None                        ; None                      ; 5.479 ns                ;
+; N/A   ; 163.19 MHz ( period = 6.128 ns )               ; stepper:s1|position[16] ; stepper:s1|position[18] ; pul        ; pul      ; None                        ; None                      ; 5.419 ns                ;
+; N/A   ; 163.61 MHz ( period = 6.112 ns )               ; stepper:s1|fmod         ; stepper:s1|position[10] ; pul        ; pul      ; None                        ; None                      ; 5.403 ns                ;
+; N/A   ; 164.37 MHz ( period = 6.084 ns )               ; stepper:s1|position[18] ; stepper:s1|position[17] ; pul        ; pul      ; None                        ; None                      ; 5.375 ns                ;
+; N/A   ; 164.39 MHz ( period = 6.083 ns )               ; stepper:s1|position[18] ; stepper:s1|position[16] ; pul        ; pul      ; None                        ; None                      ; 5.374 ns                ;
+; N/A   ; 164.74 MHz ( period = 6.070 ns )               ; stepper:s1|position[18] ; stepper:s1|position[19] ; pul        ; pul      ; None                        ; None                      ; 5.361 ns                ;
+; N/A   ; 164.88 MHz ( period = 6.065 ns )               ; stepper:s1|position[18] ; stepper:s1|position[0]  ; pul        ; pul      ; None                        ; None                      ; 5.356 ns                ;
+; N/A   ; 165.65 MHz ( period = 6.037 ns )               ; stepper:s1|position[4]  ; stepper:s1|position[4]  ; pul        ; pul      ; None                        ; None                      ; 5.328 ns                ;
+; N/A   ; 167.81 MHz ( period = 5.959 ns )               ; stepper:s1|position[11] ; stepper:s1|position[9]  ; pul        ; pul      ; None                        ; None                      ; 5.250 ns                ;
+; N/A   ; 167.87 MHz ( period = 5.957 ns )               ; stepper:s1|fmod         ; stepper:s1|position[1]  ; pul        ; pul      ; None                        ; None                      ; 5.248 ns                ;
+; N/A   ; 168.18 MHz ( period = 5.946 ns )               ; stepper:s1|position[7]  ; stepper:s1|position[6]  ; pul        ; pul      ; None                        ; None                      ; 5.237 ns                ;
+; N/A   ; 168.69 MHz ( period = 5.928 ns )               ; stepper:s1|position[11] ; stepper:s1|position[13] ; pul        ; pul      ; None                        ; None                      ; 5.219 ns                ;
+; N/A   ; 168.98 MHz ( period = 5.918 ns )               ; stepper:s1|position[19] ; stepper:s1|position[1]  ; pul        ; pul      ; None                        ; None                      ; 5.209 ns                ;
+; N/A   ; 169.95 MHz ( period = 5.884 ns )               ; stepper:s1|position[7]  ; stepper:s1|position[7]  ; pul        ; pul      ; None                        ; None                      ; 5.175 ns                ;
+; N/A   ; 170.33 MHz ( period = 5.871 ns )               ; stepper:s1|fmod         ; stepper:s1|position[12] ; pul        ; pul      ; None                        ; None                      ; 5.162 ns                ;
+; N/A   ; 170.97 MHz ( period = 5.849 ns )               ; stepper:s1|fmod         ; stepper:s1|position[2]  ; pul        ; pul      ; None                        ; None                      ; 5.140 ns                ;
+; N/A   ; 171.38 MHz ( period = 5.835 ns )               ; stepper:s1|position[7]  ; stepper:s1|position[8]  ; pul        ; pul      ; None                        ; None                      ; 5.126 ns                ;
+; N/A   ; 171.59 MHz ( period = 5.828 ns )               ; stepper:s1|position[1]  ; stepper:s1|position[19] ; pul        ; pul      ; None                        ; None                      ; 5.119 ns                ;
+; N/A   ; 171.61 MHz ( period = 5.827 ns )               ; stepper:s1|position[1]  ; stepper:s1|position[0]  ; pul        ; pul      ; None                        ; None                      ; 5.118 ns                ;
+; N/A   ; 173.37 MHz ( period = 5.768 ns )               ; stepper:s1|position[19] ; stepper:s1|position[17] ; pul        ; pul      ; None                        ; None                      ; 5.059 ns                ;
+; N/A   ; 175.19 MHz ( period = 5.708 ns )               ; stepper:s1|position[6]  ; stepper:s1|position[9]  ; pul        ; pul      ; None                        ; None                      ; 4.999 ns                ;
+; N/A   ; 175.65 MHz ( period = 5.693 ns )               ; stepper:s1|position[19] ; stepper:s1|position[2]  ; pul        ; pul      ; None                        ; None                      ; 4.984 ns                ;
+; N/A   ; 176.65 MHz ( period = 5.661 ns )               ; stepper:s1|position[4]  ; stepper:s1|position[5]  ; pul        ; pul      ; None                        ; None                      ; 4.952 ns                ;
+; N/A   ; 176.74 MHz ( period = 5.658 ns )               ; stepper:s1|position[15] ; stepper:s1|position[17] ; pul        ; pul      ; None                        ; None                      ; 4.949 ns                ;
+; N/A   ; 177.18 MHz ( period = 5.644 ns )               ; stepper:s1|position[11] ; stepper:s1|position[10] ; pul        ; pul      ; None                        ; None                      ; 4.935 ns                ;
+; N/A   ; 177.27 MHz ( period = 5.641 ns )               ; stepper:s1|position[3]  ; stepper:s1|position[5]  ; pul        ; pul      ; None                        ; None                      ; 4.932 ns                ;
+; N/A   ; 177.65 MHz ( period = 5.629 ns )               ; stepper:s1|position[16] ; stepper:s1|position[16] ; pul        ; pul      ; None                        ; None                      ; 4.920 ns                ;
+; N/A   ; 177.75 MHz ( period = 5.626 ns )               ; stepper:s1|position[3]  ; stepper:s1|position[4]  ; pul        ; pul      ; None                        ; None                      ; 4.917 ns                ;
+; N/A   ; 177.75 MHz ( period = 5.626 ns )               ; stepper:s1|position[14] ; stepper:s1|position[14] ; pul        ; pul      ; None                        ; None                      ; 4.917 ns                ;
+; N/A   ; 178.38 MHz ( period = 5.606 ns )               ; stepper:s1|position[18] ; stepper:s1|position[1]  ; pul        ; pul      ; None                        ; None                      ; 4.897 ns                ;
+; N/A   ; 178.73 MHz ( period = 5.595 ns )               ; stepper:s1|position[0]  ; stepper:s1|position[1]  ; pul        ; pul      ; None                        ; None                      ; 4.886 ns                ;
+; N/A   ; 180.60 MHz ( period = 5.537 ns )               ; stepper:s1|position[17] ; stepper:s1|position[18] ; pul        ; pul      ; None                        ; None                      ; 4.828 ns                ;
+; N/A   ; 181.55 MHz ( period = 5.508 ns )               ; stepper:s1|position[16] ; stepper:s1|position[17] ; pul        ; pul      ; None                        ; None                      ; 4.799 ns                ;
+; N/A   ; 181.72 MHz ( period = 5.503 ns )               ; stepper:s1|position[11] ; stepper:s1|position[12] ; pul        ; pul      ; None                        ; None                      ; 4.794 ns                ;
+; N/A   ; 181.82 MHz ( period = 5.500 ns )               ; stepper:s1|position[14] ; stepper:s1|position[17] ; pul        ; pul      ; None                        ; None                      ; 4.791 ns                ;
+; N/A   ; 183.05 MHz ( period = 5.463 ns )               ; stepper:s1|position[2]  ; stepper:s1|position[4]  ; pul        ; pul      ; None                        ; None                      ; 4.754 ns                ;
+; N/A   ; 183.08 MHz ( period = 5.462 ns )               ; stepper:s1|position[2]  ; stepper:s1|position[0]  ; pul        ; pul      ; None                        ; None                      ; 4.753 ns                ;
+; N/A   ; 183.76 MHz ( period = 5.442 ns )               ; stepper:s1|position[5]  ; stepper:s1|position[6]  ; pul        ; pul      ; None                        ; None                      ; 4.733 ns                ;
+; N/A   ; 183.86 MHz ( period = 5.439 ns )               ; stepper:s1|position[5]  ; stepper:s1|position[7]  ; pul        ; pul      ; None                        ; None                      ; 4.730 ns                ;
+; N/A   ; 184.23 MHz ( period = 5.428 ns )               ; stepper:s1|position[15] ; stepper:s1|position[14] ; pul        ; pul      ; None                        ; None                      ; 4.719 ns                ;
+; N/A   ; 184.81 MHz ( period = 5.411 ns )               ; stepper:s1|position[19] ; stepper:s1|position[18] ; pul        ; pul      ; None                        ; None                      ; 4.702 ns                ;
+; N/A   ; 185.46 MHz ( period = 5.392 ns )               ; stepper:s1|position[6]  ; stepper:s1|position[6]  ; pul        ; pul      ; None                        ; None                      ; 4.683 ns                ;
+; N/A   ; 186.12 MHz ( period = 5.373 ns )               ; stepper:s1|position[7]  ; stepper:s1|position[10] ; pul        ; pul      ; None                        ; None                      ; 4.664 ns                ;
+; N/A   ; 187.30 MHz ( period = 5.339 ns )               ; stepper:s1|position[9]  ; stepper:s1|position[12] ; pul        ; pul      ; None                        ; None                      ; 4.630 ns                ;
+; N/A   ; 187.72 MHz ( period = 5.327 ns )               ; stepper:s1|position[16] ; stepper:s1|position[19] ; pul        ; pul      ; None                        ; None                      ; 4.618 ns                ;
+; N/A   ; 187.83 MHz ( period = 5.324 ns )               ; stepper:s1|position[11] ; stepper:s1|position[11] ; pul        ; pul      ; None                        ; None                      ; 4.615 ns                ;
+; N/A   ; 188.54 MHz ( period = 5.304 ns )               ; stepper:s1|position[16] ; stepper:s1|position[15] ; pul        ; pul      ; None                        ; None                      ; 4.595 ns                ;
+; N/A   ; 188.64 MHz ( period = 5.301 ns )               ; stepper:s1|position[0]  ; stepper:s1|position[19] ; pul        ; pul      ; None                        ; None                      ; 4.592 ns                ;
+; N/A   ; 188.68 MHz ( period = 5.300 ns )               ; stepper:s1|position[0]  ; stepper:s1|position[0]  ; pul        ; pul      ; None                        ; None                      ; 4.591 ns                ;
+; N/A   ; 188.93 MHz ( period = 5.293 ns )               ; stepper:s1|position[13] ; stepper:s1|position[14] ; pul        ; pul      ; None                        ; None                      ; 4.584 ns                ;
+; N/A   ; 189.04 MHz ( period = 5.290 ns )               ; stepper:s1|position[4]  ; stepper:s1|position[6]  ; pul        ; pul      ; None                        ; None                      ; 4.581 ns                ;
+; N/A   ; 189.11 MHz ( period = 5.288 ns )               ; stepper:s1|position[5]  ; stepper:s1|position[3]  ; pul        ; pul      ; None                        ; None                      ; 4.579 ns                ;
+; N/A   ; 189.14 MHz ( period = 5.287 ns )               ; stepper:s1|position[4]  ; stepper:s1|position[7]  ; pul        ; pul      ; None                        ; None                      ; 4.578 ns                ;
+; N/A   ; 189.21 MHz ( period = 5.285 ns )               ; stepper:s1|position[14] ; stepper:s1|position[16] ; pul        ; pul      ; None                        ; None                      ; 4.576 ns                ;
+; N/A   ; 189.36 MHz ( period = 5.281 ns )               ; stepper:s1|position[6]  ; stepper:s1|position[8]  ; pul        ; pul      ; None                        ; None                      ; 4.572 ns                ;
+; N/A   ; 193.72 MHz ( period = 5.162 ns )               ; stepper:s1|position[18] ; stepper:s1|position[18] ; pul        ; pul      ; None                        ; None                      ; 4.453 ns                ;
+; N/A   ; 194.70 MHz ( period = 5.136 ns )               ; stepper:s1|position[4]  ; stepper:s1|position[3]  ; pul        ; pul      ; None                        ; None                      ; 4.427 ns                ;
+; N/A   ; 194.82 MHz ( period = 5.133 ns )               ; stepper:s1|position[10] ; stepper:s1|position[12] ; pul        ; pul      ; None                        ; None                      ; 4.424 ns                ;
+; N/A   ; 196.58 MHz ( period = 5.087 ns )               ; stepper:s1|position[15] ; stepper:s1|position[16] ; pul        ; pul      ; None                        ; None                      ; 4.378 ns                ;
+; N/A   ; 196.85 MHz ( period = 5.080 ns )               ; stepper:s1|position[17] ; stepper:s1|position[15] ; pul        ; pul      ; None                        ; None                      ; 4.371 ns                ;
+; N/A   ; 197.01 MHz ( period = 5.076 ns )               ; stepper:s1|position[5]  ; stepper:s1|position[8]  ; pul        ; pul      ; None                        ; None                      ; 4.367 ns                ;
+; N/A   ; 197.24 MHz ( period = 5.070 ns )               ; stepper:s1|position[19] ; stepper:s1|position[0]  ; pul        ; pul      ; None                        ; None                      ; 4.361 ns                ;
+; N/A   ; 197.67 MHz ( period = 5.059 ns )               ; stepper:s1|position[2]  ; stepper:s1|position[5]  ; pul        ; pul      ; None                        ; None                      ; 4.350 ns                ;
+; N/A   ; 199.64 MHz ( period = 5.009 ns )               ; stepper:s1|position[12] ; stepper:s1|position[13] ; pul        ; pul      ; None                        ; None                      ; 4.300 ns                ;
+; N/A   ; 200.16 MHz ( period = 4.996 ns )               ; stepper:s1|position[2]  ; stepper:s1|position[3]  ; pul        ; pul      ; None                        ; None                      ; 4.287 ns                ;
+; N/A   ; 201.17 MHz ( period = 4.971 ns )               ; stepper:s1|position[6]  ; stepper:s1|position[7]  ; pul        ; pul      ; None                        ; None                      ; 4.262 ns                ;
+; N/A   ; 202.06 MHz ( period = 4.949 ns )               ; stepper:s1|position[8]  ; stepper:s1|position[9]  ; pul        ; pul      ; None                        ; None                      ; 4.240 ns                ;
+; N/A   ; 204.96 MHz ( period = 4.879 ns )               ; stepper:s1|position[1]  ; stepper:s1|position[1]  ; pul        ; pul      ; None                        ; None                      ; 4.170 ns                ;
+; N/A   ; 207.73 MHz ( period = 4.814 ns )               ; stepper:s1|position[14] ; stepper:s1|position[15] ; pul        ; pul      ; None                        ; None                      ; 4.105 ns                ;
+; N/A   ; 207.94 MHz ( period = 4.809 ns )               ; stepper:s1|position[3]  ; stepper:s1|position[6]  ; pul        ; pul      ; None                        ; None                      ; 4.100 ns                ;
+; N/A   ; 208.86 MHz ( period = 4.788 ns )               ; stepper:s1|position[14] ; stepper:s1|position[13] ; pul        ; pul      ; None                        ; None                      ; 4.079 ns                ;
+; N/A   ; 209.86 MHz ( period = 4.765 ns )               ; stepper:s1|position[2]  ; stepper:s1|position[1]  ; pul        ; pul      ; None                        ; None                      ; 4.056 ns                ;
+; N/A   ; 210.17 MHz ( period = 4.758 ns )               ; stepper:s1|position[3]  ; stepper:s1|position[2]  ; pul        ; pul      ; None                        ; None                      ; 4.049 ns                ;
+; N/A   ; 210.26 MHz ( period = 4.756 ns )               ; stepper:s1|position[12] ; stepper:s1|position[10] ; pul        ; pul      ; None                        ; None                      ; 4.047 ns                ;
+; N/A   ; 210.39 MHz ( period = 4.753 ns )               ; stepper:s1|position[15] ; stepper:s1|position[15] ; pul        ; pul      ; None                        ; None                      ; 4.044 ns                ;
+; N/A   ; 210.57 MHz ( period = 4.749 ns )               ; stepper:s1|position[12] ; stepper:s1|position[11] ; pul        ; pul      ; None                        ; None                      ; 4.040 ns                ;
+; N/A   ; 211.55 MHz ( period = 4.727 ns )               ; stepper:s1|position[8]  ; stepper:s1|position[6]  ; pul        ; pul      ; None                        ; None                      ; 4.018 ns                ;
+; N/A   ; 215.42 MHz ( period = 4.642 ns )               ; stepper:s1|position[19] ; stepper:s1|position[19] ; pul        ; pul      ; None                        ; None                      ; 3.933 ns                ;
+; N/A   ; 216.87 MHz ( period = 4.611 ns )               ; stepper:s1|position[12] ; stepper:s1|position[14] ; pul        ; pul      ; None                        ; None                      ; 3.902 ns                ;
+; N/A   ; 216.92 MHz ( period = 4.610 ns )               ; stepper:s1|position[1]  ; stepper:s1|position[4]  ; pul        ; pul      ; None                        ; None                      ; 3.901 ns                ;
+; N/A   ; 217.63 MHz ( period = 4.595 ns )               ; stepper:s1|position[2]  ; stepper:s1|position[2]  ; pul        ; pul      ; None                        ; None                      ; 3.886 ns                ;
+; N/A   ; 217.86 MHz ( period = 4.590 ns )               ; stepper:s1|position[15] ; stepper:s1|position[13] ; pul        ; pul      ; None                        ; None                      ; 3.881 ns                ;
+; N/A   ; 218.05 MHz ( period = 4.586 ns )               ; stepper:s1|position[16] ; stepper:s1|position[14] ; pul        ; pul      ; None                        ; None                      ; 3.877 ns                ;
+; N/A   ; 218.91 MHz ( period = 4.568 ns )               ; stepper:s1|position[13] ; stepper:s1|position[11] ; pul        ; pul      ; None                        ; None                      ; 3.859 ns                ;
+; N/A   ; 219.11 MHz ( period = 4.564 ns )               ; stepper:s1|position[10] ; stepper:s1|position[9]  ; pul        ; pul      ; None                        ; None                      ; 3.855 ns                ;
+; N/A   ; 219.20 MHz ( period = 4.562 ns )               ; stepper:s1|position[11] ; stepper:s1|position[14] ; pul        ; pul      ; None                        ; None                      ; 3.853 ns                ;
+; N/A   ; 219.93 MHz ( period = 4.547 ns )               ; stepper:s1|position[13] ; stepper:s1|position[15] ; pul        ; pul      ; None                        ; None                      ; 3.838 ns                ;
+; N/A   ; 220.17 MHz ( period = 4.542 ns )               ; stepper:s1|position[7]  ; stepper:s1|position[5]  ; pul        ; pul      ; None                        ; None                      ; 3.833 ns                ;
+; N/A   ; 220.60 MHz ( period = 4.533 ns )               ; stepper:s1|position[10] ; stepper:s1|position[13] ; pul        ; pul      ; None                        ; None                      ; 3.824 ns                ;
+; N/A   ; 221.14 MHz ( period = 4.522 ns )               ; stepper:s1|position[0]  ; stepper:s1|position[18] ; pul        ; pul      ; None                        ; None                      ; 3.813 ns                ;
+; N/A   ; 223.51 MHz ( period = 4.474 ns )               ; stepper:s1|position[4]  ; stepper:s1|position[2]  ; pul        ; pul      ; None                        ; None                      ; 3.765 ns                ;
+; N/A   ; 224.67 MHz ( period = 4.451 ns )               ; stepper:s1|position[3]  ; stepper:s1|position[3]  ; pul        ; pul      ; None                        ; None                      ; 3.742 ns                ;
+; N/A   ; 225.33 MHz ( period = 4.438 ns )               ; stepper:s1|position[13] ; stepper:s1|position[12] ; pul        ; pul      ; None                        ; None                      ; 3.729 ns                ;
+; N/A   ; 228.21 MHz ( period = 4.382 ns )               ; stepper:s1|position[5]  ; stepper:s1|position[5]  ; pul        ; pul      ; None                        ; None                      ; 3.673 ns                ;
+; N/A   ; 229.52 MHz ( period = 4.357 ns )               ; stepper:s1|position[3]  ; stepper:s1|position[1]  ; pul        ; pul      ; None                        ; None                      ; 3.648 ns                ;
+; N/A   ; 231.00 MHz ( period = 4.329 ns )               ; stepper:s1|position[14] ; stepper:s1|position[12] ; pul        ; pul      ; None                        ; None                      ; 3.620 ns                ;
+; N/A   ; 235.35 MHz ( period = 4.249 ns )               ; stepper:s1|position[10] ; stepper:s1|position[10] ; pul        ; pul      ; None                        ; None                      ; 3.540 ns                ;
+; N/A   ; 235.74 MHz ( period = 4.242 ns )               ; stepper:s1|position[6]  ; stepper:s1|position[5]  ; pul        ; pul      ; None                        ; None                      ; 3.533 ns                ;
+; N/A   ; 236.24 MHz ( period = 4.233 ns )               ; stepper:s1|position[6]  ; stepper:s1|position[4]  ; pul        ; pul      ; None                        ; None                      ; 3.524 ns                ;
+; N/A   ; 237.70 MHz ( period = 4.207 ns )               ; stepper:s1|position[13] ; stepper:s1|position[16] ; pul        ; pul      ; None                        ; None                      ; 3.498 ns                ;
+; N/A   ; 238.61 MHz ( period = 4.191 ns )               ; stepper:s1|position[9]  ; stepper:s1|position[9]  ; pul        ; pul      ; None                        ; None                      ; 3.482 ns                ;
+; N/A   ; 251.07 MHz ( period = 3.983 ns )               ; stepper:s1|position[10] ; stepper:s1|position[8]  ; pul        ; pul      ; None                        ; None                      ; 3.274 ns                ;
+; N/A   ; 251.32 MHz ( period = 3.979 ns )               ; stepper:s1|position[10] ; stepper:s1|position[11] ; pul        ; pul      ; None                        ; None                      ; 3.270 ns                ;
+; N/A   ; 258.73 MHz ( period = 3.865 ns )               ; stepper:s1|position[12] ; stepper:s1|position[15] ; pul        ; pul      ; None                        ; None                      ; 3.156 ns                ;
+; N/A   ; 266.24 MHz ( period = 3.756 ns )               ; stepper:s1|position[12] ; stepper:s1|position[12] ; pul        ; pul      ; None                        ; None                      ; 3.047 ns                ;
+; N/A   ; 274.80 MHz ( period = 3.639 ns )               ; stepper:s1|position[13] ; stepper:s1|position[13] ; pul        ; pul      ; None                        ; None                      ; 2.930 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; stepper:s1|fmod         ; stepper:s1|fmod         ; pul        ; pul      ; None                        ; None                      ; 2.042 ns                ;
++-------+------------------------------------------------+-------------------------+-------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------+
+; tsu                                                                           ;
++-------+--------------+------------+------+-------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                      ; To Clock ;
++-------+--------------+------------+------+-------------------------+----------+
+; N/A   ; None         ; 1.924 ns   ; mod  ; stepper:s1|position[3]  ; pul      ;
+; N/A   ; None         ; 1.773 ns   ; mod  ; stepper:s1|position[11] ; pul      ;
+; N/A   ; None         ; 1.700 ns   ; mod  ; stepper:s1|position[2]  ; pul      ;
+; N/A   ; None         ; 1.599 ns   ; mod  ; stepper:s1|position[10] ; pul      ;
+; N/A   ; None         ; 1.598 ns   ; mod  ; stepper:s1|position[1]  ; pul      ;
+; N/A   ; None         ; 1.511 ns   ; mod  ; stepper:s1|position[17] ; pul      ;
+; N/A   ; None         ; 1.461 ns   ; mod  ; stepper:s1|position[5]  ; pul      ;
+; N/A   ; None         ; 1.417 ns   ; mod  ; stepper:s1|position[18] ; pul      ;
+; N/A   ; None         ; 1.374 ns   ; mod  ; stepper:s1|position[8]  ; pul      ;
+; N/A   ; None         ; 1.314 ns   ; mod  ; stepper:s1|position[4]  ; pul      ;
+; N/A   ; None         ; 1.313 ns   ; mod  ; stepper:s1|position[0]  ; pul      ;
+; N/A   ; None         ; 1.285 ns   ; mod  ; stepper:s1|position[16] ; pul      ;
+; N/A   ; None         ; 1.111 ns   ; mod  ; stepper:s1|position[7]  ; pul      ;
+; N/A   ; None         ; 1.097 ns   ; mod  ; stepper:s1|position[12] ; pul      ;
+; N/A   ; None         ; 1.006 ns   ; mod  ; stepper:s1|position[19] ; pul      ;
+; N/A   ; None         ; 0.960 ns   ; mod  ; stepper:s1|position[15] ; pul      ;
+; N/A   ; None         ; 0.945 ns   ; mod  ; stepper:s1|position[9]  ; pul      ;
+; N/A   ; None         ; 0.876 ns   ; dir  ; stepper:s1|position[18] ; pul      ;
+; N/A   ; None         ; 0.700 ns   ; mod  ; stepper:s1|position[14] ; pul      ;
+; N/A   ; None         ; 0.629 ns   ; mod  ; stepper:s1|position[6]  ; pul      ;
+; N/A   ; None         ; 0.444 ns   ; dir  ; stepper:s1|position[9]  ; pul      ;
+; N/A   ; None         ; 0.434 ns   ; dir  ; stepper:s1|position[11] ; pul      ;
+; N/A   ; None         ; 0.409 ns   ; dir  ; stepper:s1|position[19] ; pul      ;
+; N/A   ; None         ; 0.403 ns   ; dir  ; stepper:s1|position[0]  ; pul      ;
+; N/A   ; None         ; 0.391 ns   ; mod  ; stepper:s1|position[13] ; pul      ;
+; N/A   ; None         ; 0.273 ns   ; dir  ; stepper:s1|position[17] ; pul      ;
+; N/A   ; None         ; 0.249 ns   ; dir  ; stepper:s1|position[10] ; pul      ;
+; N/A   ; None         ; 0.063 ns   ; dir  ; stepper:s1|position[6]  ; pul      ;
+; N/A   ; None         ; 0.062 ns   ; dir  ; stepper:s1|position[7]  ; pul      ;
+; N/A   ; None         ; 0.022 ns   ; dir  ; stepper:s1|position[13] ; pul      ;
+; N/A   ; None         ; 0.014 ns   ; dir  ; stepper:s1|position[8]  ; pul      ;
+; N/A   ; None         ; -0.060 ns  ; dir  ; stepper:s1|position[4]  ; pul      ;
+; N/A   ; None         ; -0.139 ns  ; dir  ; stepper:s1|position[16] ; pul      ;
+; N/A   ; None         ; -0.186 ns  ; dir  ; stepper:s1|position[5]  ; pul      ;
+; N/A   ; None         ; -0.645 ns  ; dir  ; stepper:s1|position[15] ; pul      ;
+; N/A   ; None         ; -0.736 ns  ; dir  ; stepper:s1|position[12] ; pul      ;
+; N/A   ; None         ; -0.754 ns  ; ena  ; stepper:s1|position[0]  ; pul      ;
+; N/A   ; None         ; -0.754 ns  ; ena  ; stepper:s1|position[19] ; pul      ;
+; N/A   ; None         ; -0.754 ns  ; ena  ; stepper:s1|fmod         ; pul      ;
+; N/A   ; None         ; -0.775 ns  ; ena  ; stepper:s1|position[10] ; pul      ;
+; N/A   ; None         ; -0.775 ns  ; ena  ; stepper:s1|position[8]  ; pul      ;
+; N/A   ; None         ; -0.775 ns  ; ena  ; stepper:s1|position[11] ; pul      ;
+; N/A   ; None         ; -0.775 ns  ; ena  ; stepper:s1|position[9]  ; pul      ;
+; N/A   ; None         ; -0.929 ns  ; dir  ; stepper:s1|position[2]  ; pul      ;
+; N/A   ; None         ; -1.018 ns  ; dir  ; stepper:s1|position[14] ; pul      ;
+; N/A   ; None         ; -1.041 ns  ; dir  ; stepper:s1|position[3]  ; pul      ;
+; N/A   ; None         ; -1.056 ns  ; ena  ; stepper:s1|position[18] ; pul      ;
+; N/A   ; None         ; -1.201 ns  ; ena  ; stepper:s1|position[5]  ; pul      ;
+; N/A   ; None         ; -1.201 ns  ; ena  ; stepper:s1|position[7]  ; pul      ;
+; N/A   ; None         ; -1.201 ns  ; ena  ; stepper:s1|position[6]  ; pul      ;
+; N/A   ; None         ; -1.201 ns  ; ena  ; stepper:s1|position[4]  ; pul      ;
+; N/A   ; None         ; -1.255 ns  ; ena  ; stepper:s1|position[15] ; pul      ;
+; N/A   ; None         ; -1.255 ns  ; ena  ; stepper:s1|position[17] ; pul      ;
+; N/A   ; None         ; -1.255 ns  ; ena  ; stepper:s1|position[16] ; pul      ;
+; N/A   ; None         ; -1.259 ns  ; ena  ; stepper:s1|position[12] ; pul      ;
+; N/A   ; None         ; -1.259 ns  ; ena  ; stepper:s1|position[13] ; pul      ;
+; N/A   ; None         ; -1.259 ns  ; ena  ; stepper:s1|position[14] ; pul      ;
+; N/A   ; None         ; -1.271 ns  ; dir  ; stepper:s1|position[1]  ; pul      ;
+; N/A   ; None         ; -1.416 ns  ; mod  ; stepper:s1|fmod         ; pul      ;
+; N/A   ; None         ; -1.676 ns  ; ena  ; stepper:s1|position[2]  ; pul      ;
+; N/A   ; None         ; -1.676 ns  ; ena  ; stepper:s1|position[1]  ; pul      ;
+; N/A   ; None         ; -1.676 ns  ; ena  ; stepper:s1|position[3]  ; pul      ;
++-------+--------------+------------+------+-------------------------+----------+
+
+
++-------------------------------------------------------------------------------------+
+; th                                                                                  ;
++---------------+-------------+-----------+------+-------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                      ; To Clock ;
++---------------+-------------+-----------+------+-------------------------+----------+
+; N/A           ; None        ; 2.418 ns  ; dir  ; stepper:s1|position[3]  ; pul      ;
+; N/A           ; None        ; 2.370 ns  ; mod  ; stepper:s1|position[16] ; pul      ;
+; N/A           ; None        ; 2.335 ns  ; mod  ; stepper:s1|position[14] ; pul      ;
+; N/A           ; None        ; 2.233 ns  ; mod  ; stepper:s1|position[15] ; pul      ;
+; N/A           ; None        ; 2.230 ns  ; ena  ; stepper:s1|position[2]  ; pul      ;
+; N/A           ; None        ; 2.230 ns  ; ena  ; stepper:s1|position[1]  ; pul      ;
+; N/A           ; None        ; 2.230 ns  ; ena  ; stepper:s1|position[3]  ; pul      ;
+; N/A           ; None        ; 2.209 ns  ; mod  ; stepper:s1|position[4]  ; pul      ;
+; N/A           ; None        ; 2.198 ns  ; mod  ; stepper:s1|position[6]  ; pul      ;
+; N/A           ; None        ; 2.169 ns  ; mod  ; stepper:s1|position[8]  ; pul      ;
+; N/A           ; None        ; 2.066 ns  ; dir  ; stepper:s1|position[18] ; pul      ;
+; N/A           ; None        ; 1.970 ns  ; mod  ; stepper:s1|fmod         ; pul      ;
+; N/A           ; None        ; 1.894 ns  ; dir  ; stepper:s1|position[12] ; pul      ;
+; N/A           ; None        ; 1.874 ns  ; mod  ; stepper:s1|position[2]  ; pul      ;
+; N/A           ; None        ; 1.825 ns  ; dir  ; stepper:s1|position[1]  ; pul      ;
+; N/A           ; None        ; 1.813 ns  ; ena  ; stepper:s1|position[12] ; pul      ;
+; N/A           ; None        ; 1.813 ns  ; ena  ; stepper:s1|position[13] ; pul      ;
+; N/A           ; None        ; 1.813 ns  ; ena  ; stepper:s1|position[14] ; pul      ;
+; N/A           ; None        ; 1.809 ns  ; ena  ; stepper:s1|position[15] ; pul      ;
+; N/A           ; None        ; 1.809 ns  ; ena  ; stepper:s1|position[17] ; pul      ;
+; N/A           ; None        ; 1.809 ns  ; ena  ; stepper:s1|position[16] ; pul      ;
+; N/A           ; None        ; 1.800 ns  ; dir  ; stepper:s1|position[5]  ; pul      ;
+; N/A           ; None        ; 1.757 ns  ; dir  ; stepper:s1|position[7]  ; pul      ;
+; N/A           ; None        ; 1.755 ns  ; ena  ; stepper:s1|position[5]  ; pul      ;
+; N/A           ; None        ; 1.755 ns  ; ena  ; stepper:s1|position[7]  ; pul      ;
+; N/A           ; None        ; 1.755 ns  ; ena  ; stepper:s1|position[6]  ; pul      ;
+; N/A           ; None        ; 1.755 ns  ; ena  ; stepper:s1|position[4]  ; pul      ;
+; N/A           ; None        ; 1.752 ns  ; mod  ; stepper:s1|position[19] ; pul      ;
+; N/A           ; None        ; 1.720 ns  ; mod  ; stepper:s1|position[1]  ; pul      ;
+; N/A           ; None        ; 1.717 ns  ; mod  ; stepper:s1|position[12] ; pul      ;
+; N/A           ; None        ; 1.693 ns  ; dir  ; stepper:s1|position[17] ; pul      ;
+; N/A           ; None        ; 1.610 ns  ; ena  ; stepper:s1|position[18] ; pul      ;
+; N/A           ; None        ; 1.595 ns  ; dir  ; stepper:s1|position[13] ; pul      ;
+; N/A           ; None        ; 1.572 ns  ; dir  ; stepper:s1|position[14] ; pul      ;
+; N/A           ; None        ; 1.483 ns  ; dir  ; stepper:s1|position[2]  ; pul      ;
+; N/A           ; None        ; 1.329 ns  ; mod  ; stepper:s1|position[5]  ; pul      ;
+; N/A           ; None        ; 1.329 ns  ; ena  ; stepper:s1|position[10] ; pul      ;
+; N/A           ; None        ; 1.329 ns  ; ena  ; stepper:s1|position[8]  ; pul      ;
+; N/A           ; None        ; 1.329 ns  ; ena  ; stepper:s1|position[11] ; pul      ;
+; N/A           ; None        ; 1.329 ns  ; ena  ; stepper:s1|position[9]  ; pul      ;
+; N/A           ; None        ; 1.324 ns  ; dir  ; stepper:s1|position[9]  ; pul      ;
+; N/A           ; None        ; 1.308 ns  ; ena  ; stepper:s1|position[0]  ; pul      ;
+; N/A           ; None        ; 1.308 ns  ; ena  ; stepper:s1|position[19] ; pul      ;
+; N/A           ; None        ; 1.308 ns  ; ena  ; stepper:s1|fmod         ; pul      ;
+; N/A           ; None        ; 1.306 ns  ; mod  ; stepper:s1|position[10] ; pul      ;
+; N/A           ; None        ; 1.292 ns  ; mod  ; stepper:s1|position[13] ; pul      ;
+; N/A           ; None        ; 1.236 ns  ; dir  ; stepper:s1|position[0]  ; pul      ;
+; N/A           ; None        ; 1.199 ns  ; dir  ; stepper:s1|position[15] ; pul      ;
+; N/A           ; None        ; 1.118 ns  ; mod  ; stepper:s1|position[11] ; pul      ;
+; N/A           ; None        ; 1.112 ns  ; dir  ; stepper:s1|position[11] ; pul      ;
+; N/A           ; None        ; 1.108 ns  ; mod  ; stepper:s1|position[9]  ; pul      ;
+; N/A           ; None        ; 1.100 ns  ; dir  ; stepper:s1|position[10] ; pul      ;
+; N/A           ; None        ; 0.876 ns  ; mod  ; stepper:s1|position[7]  ; pul      ;
+; N/A           ; None        ; 0.866 ns  ; mod  ; stepper:s1|position[3]  ; pul      ;
+; N/A           ; None        ; 0.714 ns  ; mod  ; stepper:s1|position[17] ; pul      ;
+; N/A           ; None        ; 0.693 ns  ; dir  ; stepper:s1|position[16] ; pul      ;
+; N/A           ; None        ; 0.614 ns  ; dir  ; stepper:s1|position[4]  ; pul      ;
+; N/A           ; None        ; 0.540 ns  ; dir  ; stepper:s1|position[8]  ; pul      ;
+; N/A           ; None        ; 0.491 ns  ; dir  ; stepper:s1|position[6]  ; pul      ;
+; N/A           ; None        ; 0.342 ns  ; mod  ; stepper:s1|position[0]  ; pul      ;
+; N/A           ; None        ; 0.312 ns  ; mod  ; stepper:s1|position[18] ; pul      ;
+; N/A           ; None        ; 0.145 ns  ; dir  ; stepper:s1|position[19] ; pul      ;
++---------------+-------------+-----------+------+-------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 6.1 Build 201 11/27/2006 SJ Web Edition
+    Info: Processing started: Thu Dec 17 15:46:05 2015
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off epm240 -c epm240
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "pul" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "clk_generate:cg1|clk_generate_pwm:cgp|count_pwm[8]" as buffer
+Info: Clock "pul" has Internal fmax of 131.53 MHz between source register "stepper:s1|position[8]" and destination register "stepper:s1|position[11]" (period= 7.603 ns)
+    Info: + Longest register to register delay is 6.894 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X6_Y1_N2; Fanout = 2; REG Node = 'stepper:s1|position[8]'
+        Info: 2: + IC(2.142 ns) + CELL(0.914 ns) = 3.056 ns; Loc. = LC_X6_Y2_N8; Fanout = 4; COMB Node = 'stepper:s1|position~1600'
+        Info: 3: + IC(2.024 ns) + CELL(0.511 ns) = 5.591 ns; Loc. = LC_X6_Y1_N8; Fanout = 1; COMB Node = 'stepper:s1|position~1636'
+        Info: 4: + IC(0.712 ns) + CELL(0.591 ns) = 6.894 ns; Loc. = LC_X6_Y1_N3; Fanout = 2; REG Node = 'stepper:s1|position[11]'
+        Info: Total cell delay = 2.016 ns ( 29.24 % )
+        Info: Total interconnect delay = 4.878 ns ( 70.76 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "pul" to destination register is 6.507 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_5; Fanout = 22; CLK Node = 'pul'
+            Info: 2: + IC(4.457 ns) + CELL(0.918 ns) = 6.507 ns; Loc. = LC_X6_Y1_N3; Fanout = 2; REG Node = 'stepper:s1|position[11]'
+            Info: Total cell delay = 2.050 ns ( 31.50 % )
+            Info: Total interconnect delay = 4.457 ns ( 68.50 % )
+        Info: - Longest clock path from clock "pul" to source register is 6.507 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_5; Fanout = 22; CLK Node = 'pul'
+            Info: 2: + IC(4.457 ns) + CELL(0.918 ns) = 6.507 ns; Loc. = LC_X6_Y1_N2; Fanout = 2; REG Node = 'stepper:s1|position[8]'
+            Info: Total cell delay = 2.050 ns ( 31.50 % )
+            Info: Total interconnect delay = 4.457 ns ( 68.50 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Micro setup delay of destination is 0.333 ns
+Info: tsu for register "stepper:s1|position[3]" (data pin = "mod", clock pin = "pul") is 1.924 ns
+    Info: + Longest pin to register delay is 8.098 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_55; Fanout = 50; PIN Node = 'mod'
+        Info: 2: + IC(2.820 ns) + CELL(0.511 ns) = 4.463 ns; Loc. = LC_X6_Y2_N2; Fanout = 4; COMB Node = 'stepper:s1|position~1592'
+        Info: 3: + IC(2.310 ns) + CELL(0.200 ns) = 6.973 ns; Loc. = LC_X2_Y1_N4; Fanout = 1; COMB Node = 'stepper:s1|position~1642'
+        Info: 4: + IC(0.534 ns) + CELL(0.591 ns) = 8.098 ns; Loc. = LC_X2_Y1_N5; Fanout = 2; REG Node = 'stepper:s1|position[3]'
+        Info: Total cell delay = 2.434 ns ( 30.06 % )
+        Info: Total interconnect delay = 5.664 ns ( 69.94 % )
+    Info: + Micro setup delay of destination is 0.333 ns
+    Info: - Shortest clock path from clock "pul" to destination register is 6.507 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_5; Fanout = 22; CLK Node = 'pul'
+        Info: 2: + IC(4.457 ns) + CELL(0.918 ns) = 6.507 ns; Loc. = LC_X2_Y1_N5; Fanout = 2; REG Node = 'stepper:s1|position[3]'
+        Info: Total cell delay = 2.050 ns ( 31.50 % )
+        Info: Total interconnect delay = 4.457 ns ( 68.50 % )
+Info: th for register "stepper:s1|position[3]" (data pin = "dir", clock pin = "pul") is 2.418 ns
+    Info: + Longest clock path from clock "pul" to destination register is 6.507 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_5; Fanout = 22; CLK Node = 'pul'
+        Info: 2: + IC(4.457 ns) + CELL(0.918 ns) = 6.507 ns; Loc. = LC_X2_Y1_N5; Fanout = 2; REG Node = 'stepper:s1|position[3]'
+        Info: Total cell delay = 2.050 ns ( 31.50 % )
+        Info: Total interconnect delay = 4.457 ns ( 68.50 % )
+    Info: + Micro hold delay of destination is 0.221 ns
+    Info: - Shortest pin to register delay is 4.310 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_8; Fanout = 31; PIN Node = 'dir'
+        Info: 2: + IC(2.374 ns) + CELL(0.804 ns) = 4.310 ns; Loc. = LC_X2_Y1_N5; Fanout = 2; REG Node = 'stepper:s1|position[3]'
+        Info: Total cell delay = 1.936 ns ( 44.92 % )
+        Info: Total interconnect delay = 2.374 ns ( 55.08 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Allocated 125 megabytes of memory during processing
+    Info: Processing ended: Thu Dec 17 15:46:06 2015
+    Info: Elapsed time: 00:00:01
+
+

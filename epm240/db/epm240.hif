@@ -1,0 +1,213 @@
+Version 6.1 Build 201 11/27/2006 SJ Web Edition
+36
+1974
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+epm240
+# storage
+db|epm240.(0).cnf
+db|epm240.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+5phase.v
+26ff62133a8ccc16c68e92202927
+7
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+|
+}
+# end
+# entity
+stepper
+# storage
+db|epm240.(1).cnf
+db|epm240.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+5phase.v
+26ff62133a8ccc16c68e92202927
+7
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# user_parameter {
+A1
+0
+PARAMETER_SIGNED_DEC
+DEF
+A2
+10
+PARAMETER_SIGNED_DEC
+DEF
+B1
+5
+PARAMETER_SIGNED_DEC
+DEF
+B2
+15
+PARAMETER_SIGNED_DEC
+DEF
+C1
+7
+PARAMETER_SIGNED_DEC
+DEF
+C2
+19
+PARAMETER_SIGNED_DEC
+DEF
+D1
+12
+PARAMETER_SIGNED_DEC
+DEF
+D2
+2
+PARAMETER_SIGNED_DEC
+DEF
+E1
+17
+PARAMETER_SIGNED_DEC
+DEF
+E2
+6
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+stepper:s1
+}
+# end
+# entity
+clk_generate
+# storage
+db|epm240.(2).cnf
+db|epm240.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+5phase.v
+26ff62133a8ccc16c68e92202927
+7
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+clk_generate:cg1
+}
+# end
+# entity
+clk_altufm_osc_1p3
+# storage
+db|epm240.(3).cnf
+db|epm240.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+5phase.v
+26ff62133a8ccc16c68e92202927
+7
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# memory_file {
+none
+0
+}
+# hierarchies {
+clk_generate:cg1|clk_altufm_osc_1p3:clk_altufm_osc_1p3_component
+}
+# end
+# entity
+clk_generate_pwm
+# storage
+db|epm240.(4).cnf
+db|epm240.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+5phase.v
+26ff62133a8ccc16c68e92202927
+7
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+clk_generate:cg1|clk_generate_pwm:cgp
+}
+# end
+# entity
+clk_generate_hfc
+# storage
+db|epm240.(5).cnf
+db|epm240.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+5phase.v
+26ff62133a8ccc16c68e92202927
+7
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+}
+# hierarchies {
+clk_generate:cg1|clk_generate_hfc:cgh
+}
+# end
+# complete
+
